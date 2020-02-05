@@ -148,7 +148,7 @@ namespace WeddingPlanner.Controllers
                 return View("Index");
             }
             if(newWedding.Date < DateTime.Now){
-                ViewBag.DATE = "Must have a fucking wedding in the future";
+                ViewBag.DATE = "Must have a wedding in the future";
                 ViewBag.ID = HttpContext.Session.GetInt32("User");
                 return View("addnewweddingview");
 
