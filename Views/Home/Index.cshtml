@@ -1,0 +1,345 @@
+﻿
+@using WeddingPlanner.Models
+@model IndexViewModels
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/71100f8d22.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Atomic+Age|Fascinate|Metal+Mania|Permanent+Marker|Righteous|Ubuntu&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <style>
+    .login-button-container {
+  margin: 32px -15px;
+}
+
+.sign-in {
+ padding-left: 0;
+}
+
+.register {
+ padding-right: 0;
+}
+.sign-in__button:hover{
+  
+    background-color:#23eae6;
+    border: 2px solid #93b5b3;
+    color: #042f4b;
+    border-radius: 5px;
+    
+
+
+}
+.register__button:hover{
+  
+    background-color:#23eae6;
+    border: 2px solid #93b5b3;
+    color: #042f4b;
+    border-radius: 5px;
+    
+
+
+}
+.sign-in__button,
+.register__button {
+  background-color: #1b7fbd;
+  border: 2px solid #fcb1b1;
+  display: block;
+  min-height: 60px;
+  width: 100%;
+  font-weight: bold;
+  color: #f9f3ec;
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+
+ 
+
+  &:focus,
+  &.focus {
+    outline: 3px solid orange !important;
+  }
+
+  &:active,
+  &.active {
+    background-color: #1ee3cf;
+    border: 1px solid pink;
+    box-shadow: none;
+  }
+}
+
+.hidden_clip {
+  clip: rect(1px 1px 1px 1px); // IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+
+.text-input__field {
+  border: 0;
+  display: block;
+  font-size: 16px;
+  height: 60px;
+  outline: 1px solid #1ee3cf;
+  padding: 18px;
+  width: 100%;
+
+  &:focus,
+  &.focus {
+    outline: 3px solid orange;
+  }
+
+  &:active,
+  &.active {
+    outline: 1px solid black;
+  }
+}
+
+    </style>
+<!-- <div class="text-center ">
+<div class="row  ">
+    <div class="  col-md-6 bg-primary">
+       
+
+<h1 class="text-danger ">@ViewBag.ses</h1>
+
+        <form asp-action="Register" asp-controller="Home" method="post">
+        <span asp-validation-for="newUser.FirstName"></span>
+        
+        <input class="form-control mt-3" placeholder="First Name"  asp-for="newUser.FirstName">
+       
+
+         <span asp-validation-for="newUser.LastName"></span>
+        <label asp-for="newUser.LastName"></label>
+        <input class="form-control" asp-for="newUser.LastName">
+       
+         <p class="text-danger">@ViewBag.Email</p>
+         
+        <span asp-validation-for="newUser.Email"></span>
+        <label asp-for="newUser.Email"></label>
+        <input class="form-control" asp-for="newUser.Email">
+       
+        <span asp-validation-for="newUser.Password"></span>
+        <label asp-for="newUser.Password"></label>
+        <input class="form-control"asp-for="newUser.Password">
+        
+        <span asp-validation-for="newUser.Confirm"></span>
+        <label asp-for="newUser.Confirm"></label>
+        <input class="form-control "  asp-for="newUser.Confirm">
+        
+
+ <br>
+        <input value="Add User" type="submit">    
+    </form>
+    </div>
+<div class="col-md-6 ">
+    <form asp-action="Login" asp-controller="Home" method="post">
+        <div class="form-group">
+     <p class="text-danger">@ViewBag.LogEmail</p>
+        <span asp-validation-for="login.LogEmail"></span>
+        <label >Email</label>
+        <input class="form-control" asp-for="login.LogEmail">
+         <br>
+        <span asp-validation-for="login.LogPassword"></span>
+        <label >Password</label>
+        <input class="form-control" asp-for="login.LogPassword">
+         <br>
+        
+
+
+        <input class=" btn btn-outline-success btn-dark" value="Login" type="submit">    
+        </div>
+    </form>
+    </div>
+    </div>
+</div> -->
+
+
+
+
+
+ <div class="container">
+<h1 class="text-danger text-center ">@ViewBag.ses</h1>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+          <div class="login-button-container clearfix">
+      
+            <div class="col-xs-6 sign-in">
+              <button class="btn sign-in__button active">
+                Sign in        
+              </button>
+            </div>
+      
+            <div class="col-xs-6 register">
+              <button class="btn register__button">
+                Register        
+              </button>
+            </div>
+      
+          </div>
+        </div>
+      
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+      
+          <div class="row login__form" style="display: block;">
+            <form asp-action="Login" asp-controller="Home" method="post"accept-charset="UTF-8">
+            
+              <div>
+                <fieldset class="form__fieldset required form__login">
+                  <legend class="form__legend--subtitle">
+                    Sign in using email </legend>
+      
+                  <div class="form__field__wrapper form-item"> <label for="edit-email" class="text-input__label">Email address <span class="form-required" aria-hidden="true" title="This field is required.">*</span> <span asp-validation-for="login.LogEmail"></span><span class="hidden_clip">a required field.</span></label>
+             <input class="form-control form-text required text-input__field" type="text" id="edit-email" asp-for="login.LogEmail" value="" size="60" maxlength="128" aria-required="true" aria-describedby="edit-email-descriptor">
+                  </div>
+                  <div class="form__field__wrapper form-item"> <label for="edit-password" class="text-input__label">Password <span class="form-required" aria-hidden="true" title="This field is required.">*</span><span class="hidden_clip">a required field.</span></label>
+                    <input class="form-control form-text password__field text-input__field required" type="password" id="login" asp-for="login.LogPassword" size="60" maxlength="128" aria-required="true">
+                    <script>
+                            function loginPassword() {
+                                var x = document.getElementById("login");
+                                    if (x.type === "password") {
+                                        x.type = "text";
+                                    }
+                                    else {x.type = "password";}
+                            }
+                        </script>
+                </div>
+                </fieldset>
+                <button class="inpt-btn btn btn-primary form-submit js-registerSubmit" type="submit" id="edit-submit" value="Register">Sign in</button>
+              </div>
+            </form>
+          </div>
+      
+          <div class="row register__form" style="display: none;">
+            <div id="registration-form-wrapper">
+             <form asp-action="Register" asp-controller="Home" method="post" accept-charset="UTF-8">
+                
+                <div>
+                  <div class="form__register">
+      
+      
+                    <div class="clearfix"></div>
+      
+                    <div class="divide-width">
+                      <div class="middle-bottom-inner-left">
+                        <div class="form__field__wrapper form-item"><span asp-validation-for="newUser.FirstName"></span> <label for="edit-firstname" class="text-input__label">First Name <span class="form-required" aria-hidden="true" title="This field is required.">*</span><span class="hidden_clip">a required field.</span></label>
+                          <input placeholder="First name" class="form-control form-text required text-input__field" type="text" id="edit-firstname" asp-for="newUser.FirstName" value="" size="60" maxlength="128" aria-required="true" aria-describedby="edit-firstname-descriptor">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="divide-width divide-mrgn">
+                      <div class="middle-bottom-inner-left">
+                        <div class="form__field__wrapper form-item"> <label for="edit-lastname" class="input__label">Last Name <span class="form-required" aria-hidden="true" title="This field is required.">*</span><span asp-validation-for="newUser.LastName"></span><span class="hidden_clip">a required field.</span></label>
+                          <input placeholder="Last name" class="form-control form-text required text-input__field" type="text" id="edit-lastname" asp-for="newUser.LastName"value="" size="60" maxlength="128" aria-required="true" aria-describedby="edit-lastname-descriptor">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="divide-width divide-mrgn">
+                            <div class="middle-bottom-inner-left">
+                              <div class="form__field__wrapper form-item"> <label for="edit-lastname" class="input__label">Username <span class="form-required" aria-hidden="true" title="This field is required.">*</span><span class="hidden_clip">a required field.</span></label>
+                                <input placeholder="Username" class="form-control form-text required text-input__field" type="text" id="edit-lastname" name="username" value="" size="60" maxlength="128" aria-required="true" aria-describedby="edit-lastname-descriptor">
+                              </div>
+                            </div>
+                          </div> -->
+
+
+                          <!-- <div class="divide-width divide-mrgn">
+                                <div class="middle-bottom-inner-left">
+                                  <div class="form__field__wrapper form-item"> <label for="edit-lastname" class="input__label">Username <span class="form-required" aria-hidden="true" title="This field is required.">*</span><span class="hidden_clip">a required field.</span></label>
+                                    <input placeholder="Birthdate" class="form-control form-text required text-input__field" type="date" id="datepicker" name="birthday" value="" size="60" maxlength="128" aria-required="true" aria-describedby="edit-lastname-descriptor">
+                                  </div>
+                                </div>
+                              </div> -->
+
+                              
+                    <div class="middle-bottom-inner-left">
+                      <div class="form__field__wrapper form-item"> <label for="edit-email--2" class="input__label">Email Address <span class="form-required" aria-hidden="true" title="This field is required.">*</span><span class="hidden_clip">a required field.</span></label>
+                      <span asp-validation-for="newUser.Email"></span>
+                        <input placeholder="Enter your email address" class="form-control form-text required text-input__field" type="text" id="edit-email--2" asp-for="newUser.Email" value="" size="60" maxlength="128" aria-required="true" aria-describedby="edit-email--2-descriptor">
+                      </div>
+                    </div>
+      
+                    <div class="middle-bottom-inner-left-pass">
+                      <div class="form-type-password form-item-password form-item form-group" id="display-second-part">
+                        <div class="form__field__wrapper form-item"> <label for="edit-password--2" class="text-input__label">Password </label>
+                         <span asp-validation-for="newUser.Password"></span>
+                          <input class="form-group form-control form-text password__field text-input__field" placeholder="Create a password" data-edit-password="true" type="password" id="intitialPassword" asp-for="newUser.Password" size="60" maxlength="128"> <span class="field-suffix"><span id="passwordval"></span></span>
+                          <script>
+                                function initialPassword() {
+                                    var x = document.getElementById("intitialPassword");
+                                        if (x.type === "password") {
+                                            x.type = "text";
+                                        }
+                                        else {x.type = "password";}
+                                }
+                            </script>
+                             <label for="edit-password--2" class="text-input__label">Confirm Password </label>
+                             <span asp-validation-for="newUser.Confirm"></span>
+                          <input class="form-group form-control form-text password__field text-input__field" placeholder="Confirm password" type="password" asp-for="newUser.Confirm" id="confirmation">
+                          <script>
+                                function passwordConfirmation() {
+                                    var x = document.getElementById("confirmation");
+                                        if (x.type === "password") {
+                                            x.type = "text";
+                                        }
+                                        else {x.type = "password";}
+                                }
+                            </script>
+                        </div>
+      
+                      </div>
+                    </div>
+      
+                  </div>
+                  <button class="inpt-btn btn btn-primary form-submit js-registerSubmit" type="submit" id="edit-submit--2" name="Register" value="Register">Register</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+        </div>
+      
+      </div>
+
+      <script>
+
+$(function() {
+    $("#datepicker").datepicker({
+    dateFormat: "yy-mm-dd"
+            });
+    $("#datepicker1").datepicker({
+    dateFormat: "yy-mm-dd"
+            });
+          });
+
+       $('.register__form').hide();
+
+$('.sign-in__button').click(function(e) {
+  e.preventDefault();
+  $(this).addClass('active');
+  $('.register__button').removeClass('active');
+  $('.login__form').show();
+  $('.register__form').hide();
+  $('#edit-email').focus(); //Should appear after $('.login__form').show(); because if it's before that, the register form doesn't exist in the DOM
+});
+
+$('.register__button').click(function(e) {
+  e.preventDefault();
+  $(this).addClass('active');
+  $('.sign-in__button').removeClass('active');
+  $('.register__form').show();
+  $('.login__form').hide();
+  $('#edit-firstname').focus(); //Should appear after $('.register__form').show(); because if it's before that, the register form doesn't exist in the DOM
+});
+
+
+      </script>
+
+      </body>
+</html>
